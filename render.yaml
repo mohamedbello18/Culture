@@ -19,32 +19,57 @@ services:
         generateValue: true
       - key: DB_CONNECTION
         value: mysql
-      - key: DB_HOST
-        value: ${{ secrets.DB_HOST }} # Link to Render's MySQL service host
-      - key: DB_DATABASE
-        value: ${{ secrets.DB_DATABASE }} # Link to Render's MySQL service database name
-      - key: DB_USERNAME
-        value: ${{ secrets.DB_USERNAME }} # Link to Render's MySQL service username
-      - key: DB_PASSWORD
-        value: ${{ secrets.DB_PASSWORD }} # Link to Render's MySQL service password
+      - fromSecret:
+          key: DB_HOST
+          name: culture-benin-db
+          property: host
+      - fromSecret:
+          key: DB_DATABASE
+          name: culture-benin-db
+          property: database
+      - fromSecret:
+          key: DB_USERNAME
+          name: culture-benin-db
+          property: user
+      - fromSecret:
+          key: DB_PASSWORD
+          name: culture-benin-db
+          property: password
       - key: SESSION_DRIVER
-        value: file
-      - key: STRIPE_SECRET
-        value: your_stripe_secret_key_here # IMPORTANT: Replace with your actual Stripe secret key
+        value: database
+      - fromSecret:
+          key: STRIPE_SECRET
+          name: stripe-secret
     healthCheckPath: /
     autoDeploy: true
     buildFilter:
       paths:
-        - "**/*"
+        - "app/**"
+        - "config/**"
+        - "routes/**"
+        - "resources/**"
+        - "database/**"
+        - "public/**"
+        - "composer.json"
+        - "composer.lock"
+        - "package.json"
+        - "package-lock.json"
+        - "vite.config.js"
+        - "tailwind.config.js"
+        - "postcss.config.js"
     disk:
       name: storage
       mountPath: /var/www/html/storage
       sizeGB: 1
 
-  - type: mysql # CRITICAL FIX: Changed from pgsql to mysql
+  - type: mysql
     name: culture-benin-db
     region: frankfurt
     plan: free
     ipAllowList: []
     disk:
       sizeGB: 1
+
+secrets:
+  - key: stripe-secret
+    value: your_stripe_secret_key_here # IMPORTANT: Replace with your actual Stripe secret key

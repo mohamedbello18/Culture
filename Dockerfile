@@ -35,14 +35,17 @@ RUN a2enmod rewrite
 # Set working directory
 WORKDIR /var/www/html
 
-# CRITICAL FIX: Copy all application files BEFORE running composer install
+# Copy application files
 COPY --chown=www-data:www-data . .
 
-# Now run composer install, artisan file will be available
+# Create the .env file
+RUN cp .env.example .env
+
+# Install dependencies
 RUN composer install --no-interaction --optimize-autoloader --no-dev
 
 # Copy built assets from the node_assets stage
-COPY --from=node_assets /app/public .
+COPY --from=node_assets /app/public/build ./public/build
 
 # Set correct permissions for storage and bootstrap cache
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
