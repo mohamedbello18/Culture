@@ -1,0 +1,50 @@
+services:
+  - type: web
+    name: culture-benin
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    region: frankfurt
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: APP_URL
+        value: https://culture-benin.onrender.com
+      - key: APP_KEY
+        generateValue: true
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: ${{ secrets.DB_HOST }} # Link to Render's MySQL service host
+      - key: DB_DATABASE
+        value: ${{ secrets.DB_DATABASE }} # Link to Render's MySQL service database name
+      - key: DB_USERNAME
+        value: ${{ secrets.DB_USERNAME }} # Link to Render's MySQL service username
+      - key: DB_PASSWORD
+        value: ${{ secrets.DB_PASSWORD }} # Link to Render's MySQL service password
+      - key: SESSION_DRIVER
+        value: file
+      - key: STRIPE_SECRET
+        value: your_stripe_secret_key_here # IMPORTANT: Replace with your actual Stripe secret key
+    healthCheckPath: /
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - "**/*"
+    disk:
+      name: storage
+      mountPath: /var/www/html/storage
+      sizeGB: 1
+
+  - type: mysql # CRITICAL FIX: Changed from pgsql to mysql
+    name: culture-benin-db
+    region: frankfurt
+    plan: free
+    ipAllowList: []
+    disk:
+      sizeGB: 1
