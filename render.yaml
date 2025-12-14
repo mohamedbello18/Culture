@@ -3,7 +3,7 @@
 services:
   - type: web
     name: culture-benin
-    env: docker
+    runtime: docker
     dockerfilePath: ./Dockerfile
     dockerContext: .
     region: frankfurt
@@ -20,8 +20,6 @@ services:
         - "public/**"
         - "composer.json"
         - "composer.lock"
-        - "package.json"
-        - "package-lock.json"
         - "Dockerfile"
         - "entrypoint.sh"
     disk:
