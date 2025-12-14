@@ -12,6 +12,7 @@ use App\Http\Controllers\PublicRegionController;
 use App\Http\Controllers\PublicLangueController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\PaiementController;
+use App\Http\Controllers\ContactController;
 
 // Page d'accueil publique
 Route::get('/', function () {
