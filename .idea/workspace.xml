@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Adding SSL to database.php config and Dockrfile">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Checking the duplicate route">
+      <change beforePath="$PROJECT_DIR$/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +156,9 @@
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -298,7 +300,39 @@
       <option name="project" value="LOCAL" />
       <updated>1765708593908</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Resolving errors falgged by IDE">
+      <option name="closed" value="true" />
+      <created>1765709281154</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765709281154</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adding required runtime property">
+      <option name="closed" value="true" />
+      <created>1765709317395</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765709317395</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Correctign error framework &lt;, 1.&#10;                              In your Dockerfile, we copy your application, which includes the necessary folders like storage/framework, storage/logs, etc.&#10;                              2.&#10;                              When you deploy, Render attaches your persistent disk, mounting it over /var/www/html/storage.&#10;                              3.&#10;                              This disk is initially empty. It effectively deletes the framework and logs subdirectories that Laravel absolutely needs to write cache files, session data, and logs.&#10;                              4.&#10;                              When a real request comes in, Laravel tries to write a log or a compiled view, finds that the directory doesn't exist, and the entire PHP process crashes instantly. It crashes so fast it can't even write an error to the log file.&gt;&gt;">
+      <option name="closed" value="true" />
+      <created>1765709766783</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765709766783</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Checking the duplicate route">
+      <option name="closed" value="true" />
+      <created>1765710264101</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765710264101</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +359,11 @@
     <MESSAGE value="Removing the new .env creation process" />
     <MESSAGE value="Adding SSL to databse config" />
     <MESSAGE value="Adding SSL to database.php config and Dockrfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding SSL to database.php config and Dockrfile" />
+    <MESSAGE value="SSL Aiven Certificae" />
+    <MESSAGE value="Resolving errors falgged by IDE" />
+    <MESSAGE value="Adding required runtime property" />
+    <MESSAGE value="Correctign error framework &lt;, 1.&#10;                              In your Dockerfile, we copy your application, which includes the necessary folders like storage/framework, storage/logs, etc.&#10;                              2.&#10;                              When you deploy, Render attaches your persistent disk, mounting it over /var/www/html/storage.&#10;                              3.&#10;                              This disk is initially empty. It effectively deletes the framework and logs subdirectories that Laravel absolutely needs to write cache files, session data, and logs.&#10;                              4.&#10;                              When a real request comes in, Laravel tries to write a log or a compiled view, finds that the directory doesn't exist, and the entire PHP process crashes instantly. It crashes so fast it can't even write an error to the log file.&gt;&gt;" />
+    <MESSAGE value="Checking the duplicate route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checking the duplicate route" />
   </component>
 </project>
