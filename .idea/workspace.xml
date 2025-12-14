@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Updating the project for last modifications">
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Correction for php slient crash even though deployment is suceessful errors">
+      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +241,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765700977413</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Correction for render deployment apache errors">
+      <option name="closed" value="true" />
+      <created>1765705861445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765705861445</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Correction for php slient crash even though deployment is suceessful errors">
+      <option name="closed" value="true" />
+      <created>1765706157077</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765706157077</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +277,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Features updates and rebase of the web application" />
     <MESSAGE value="Updating the project for last modifications" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating the project for last modifications" />
+    <MESSAGE value="Correction for render deployment apache errors" />
+    <MESSAGE value="Correction for php slient crash even though deployment is suceessful errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction for php slient crash even though deployment is suceessful errors" />
   </component>
 </project>
