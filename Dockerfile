@@ -1,20 +1,7 @@
-# Stage 1: Build assets
-FROM node:18 as node_assets
-
-WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-
-# Stage 2: Setup PHP environment
 FROM php:8.2-apache
 
-# Install system dependencies, PHP extensions, and Aiven CA Certificate
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    ca-certificates \
-    git \
-    curl \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
@@ -22,35 +9,42 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev \
     libicu-dev \
-    && curl -o /etc/ssl/certs/aiven-ca.pem https://aiven.io/ca.pem \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd intl zip
+    curl \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd intl zip \
+    && a2enmod rewrite
+
+# Install Node.js for frontend assets
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Set up Apache
-RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
-RUN a2enmod rewrite
-
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy application files
-COPY --chown=www-data:www-data . .
+# Copy composer files
+COPY composer.json composer.lock ./
 
-# DO NOT create a .env file. Render will inject environment variables.
-
-# Install dependencies
+# Install PHP dependencies
 RUN composer install --no-interaction --optimize-autoloader --no-dev
 
-# Copy built assets from the node_assets stage
-COPY --from=node_assets /app/public/build ./public/build
+# Copy application code
+COPY . .
 
-# Copy the entrypoint script and make it executable
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Install Node dependencies and build assets
+RUN npm ci && npm run build
+
+# Copy entrypoint script
+COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# Expose port 80 and set the entrypoint
+# Expose port 80
 EXPOSE 80
-ENTRYPOINT ["entrypoint.sh"]
-CMD ["apache2-foreground"]
+
+# Use entrypoint script
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

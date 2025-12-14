@@ -46,14 +46,14 @@ Route::middleware(['auth', CheckAdminRole::class])
         require __DIR__.'/admin.php';
     });
 
-// Routes du profil utilisateur (Breeze's default)
+// Routes du profil utilisateur (Breeze's default) - COMMENTED OUT TO AVOID CONFLICT
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::put('/profile/password', [ProfileController::class, 'password'])->name('password.update');
     Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar.update');
-});
+ });
 
 // Routes publiques (si vous en avez)
 Route::middleware('web')

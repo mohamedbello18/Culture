@@ -1,5 +1,3 @@
-# This blueprint defines a single web service.
-# The database is external (Aiven) and its credentials should be set in the Render dashboard.
 services:
   - type: web
     name: culture-benin
@@ -10,24 +8,12 @@ services:
     plan: free
     healthCheckPath: /
     autoDeploy: true
+    # ADD THIS:
+    port: 80
+    # Also update build filter:
     buildFilter:
       paths:
-        - "app/**"
-        - "config/**"
-        - "routes/**"
-        - "resources/**"
-        - "database/**"
-        - "public/**"
-        - "composer.json"
-        - "composer.lock"
-        - "Dockerfile"
-        - "entrypoint.sh"
-    disk:
-      name: storage
-      mountPath: /var/www/html/storage
-      sizeGB: 1
-    envVars:
-      # This variable tells Laravel where to find the Aiven CA certificate
-      # that we download in the Dockerfile.
-      - key: MYSQL_ATTR_SSL_CA
-        value: /etc/ssl/certs/aiven-ca.pem
+        - "**"
+        - "!.env"
+        - "!node_modules"
+        - "!storage/logs/*"
