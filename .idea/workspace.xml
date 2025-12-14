@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Checking the duplicate route">
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Correction">
       <change beforePath="$PROJECT_DIR$/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,6 +200,10 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
@@ -332,7 +336,31 @@
       <option name="project" value="LOCAL" />
       <updated>1765710264101</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Correction">
+      <option name="closed" value="true" />
+      <created>1765711226326</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1765711226326</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Correction">
+      <option name="closed" value="true" />
+      <created>1765711285211</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1765711285211</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Correction">
+      <option name="closed" value="true" />
+      <created>1765711891018</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765711891018</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +392,7 @@
     <MESSAGE value="Adding required runtime property" />
     <MESSAGE value="Correctign error framework &lt;, 1.&#10;                              In your Dockerfile, we copy your application, which includes the necessary folders like storage/framework, storage/logs, etc.&#10;                              2.&#10;                              When you deploy, Render attaches your persistent disk, mounting it over /var/www/html/storage.&#10;                              3.&#10;                              This disk is initially empty. It effectively deletes the framework and logs subdirectories that Laravel absolutely needs to write cache files, session data, and logs.&#10;                              4.&#10;                              When a real request comes in, Laravel tries to write a log or a compiled view, finds that the directory doesn't exist, and the entire PHP process crashes instantly. It crashes so fast it can't even write an error to the log file.&gt;&gt;" />
     <MESSAGE value="Checking the duplicate route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checking the duplicate route" />
+    <MESSAGE value="Correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction" />
   </component>
 </project>
