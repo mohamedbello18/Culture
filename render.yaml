@@ -1,3 +1,5 @@
+# This blueprint defines a single web service.
+# The database is external (Aiven) and its credentials should be set in the Render dashboard.
 services:
   - type: web
     name: culture-benin
@@ -6,42 +8,6 @@ services:
     dockerContext: .
     region: frankfurt
     plan: free
-    envVars:
-      - key: APP_ENV
-        value: production
-      - key: APP_DEBUG
-        value: false
-      - key: LOG_CHANNEL
-        value: stderr
-      - key: APP_URL
-        value: https://culture-benin.onrender.com
-      - key: APP_KEY
-        generateValue: true
-      - key: DB_CONNECTION
-        value: mysql
-      - fromSecret:
-          key: DB_HOST
-          name: culture-benin-db
-          property: host
-      - fromSecret:
-          key: DB_DATABASE
-          name: culture-benin-db
-          property: database
-      - fromSecret:
-          key: DB_USERNAME
-          name: culture-benin-db
-          property: user
-      - fromSecret:
-          key: DB_PASSWORD
-          name: culture-benin-db
-          property: password
-      - key: SESSION_DRIVER
-        value: database
-      - fromSecret:
-          key: STRIPE_SECRET
-          name: stripe-secret
-      - key: MYSQL_ATTR_SSL_CA
-        value: /etc/ssl/certs/ca-certificates.crt
     healthCheckPath: /
     autoDeploy: true
     buildFilter:
@@ -56,22 +22,14 @@ services:
         - "composer.lock"
         - "package.json"
         - "package-lock.json"
-        - "vite.config.js"
-        - "tailwind.config.js"
-        - "postcss.config.js"
+        - "Dockerfile"
+        - "entrypoint.sh"
     disk:
       name: storage
       mountPath: /var/www/html/storage
       sizeGB: 1
-
-  - type: mysql
-    name: culture-benin-db
-    region: frankfurt
-    plan: free
-    ipAllowList: []
-    disk:
-      sizeGB: 1
-
-secrets:
-  - key: stripe-secret
-    value: your_stripe_secret_key_here # IMPORTANT: Replace with your actual Stripe secret key
+    envVars:
+      # This variable tells Laravel where to find the Aiven CA certificate
+      # that we download in the Dockerfile.
+      - key: MYSQL_ATTR_SSL_CA
+        value: /etc/ssl/certs/aiven-ca.pem

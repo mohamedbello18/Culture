@@ -10,7 +10,7 @@ RUN npm run build
 # Stage 2: Setup PHP environment
 FROM php:8.2-apache
 
-# Install system dependencies and PHP extensions
+# Install system dependencies, PHP extensions, and Aiven CA Certificate
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     git \
@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev \
     libicu-dev \
+    && curl -o /etc/ssl/certs/aiven-ca.pem https://aiven.io/ca.pem \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd intl zip
 
 # Install Composer

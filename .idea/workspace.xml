@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Removing the new .env creation process">
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Adding SSL to database.php config and Dockrfile">
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +282,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765707290898</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adding SSL to databse config">
+      <option name="closed" value="true" />
+      <created>1765708285412</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765708285412</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adding SSL to database.php config and Dockrfile">
+      <option name="closed" value="true" />
+      <created>1765708593908</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765708593908</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +323,8 @@
     <MESSAGE value="Resolving &lt;&lt;  Unable to prepare route [confirm-password] for serialization. Another route has already been assigned name [password.confirm]. &gt;&gt;  errors" />
     <MESSAGE value="Correcting typo in entrypoint.sh file" />
     <MESSAGE value="Removing the new .env creation process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing the new .env creation process" />
+    <MESSAGE value="Adding SSL to databse config" />
+    <MESSAGE value="Adding SSL to database.php config and Dockrfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding SSL to database.php config and Dockrfile" />
   </component>
 </project>
