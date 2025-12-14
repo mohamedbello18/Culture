@@ -4,7 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\Route; 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,11 +22,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Blade::directive('adminRoute', function ($expression) {
-            // $expression est le nom de la route sans 'admin.' (ex: 'langues.create')
-            // Nous retournons une instruction PHP qui ajoute 'admin.' et appelle la fonction route()
-            return "<?php echo route('admin.' . $expression); ?>";
-        });
-        //
+        // Force HTTPS in production environment
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+
+            // Additional security middleware
+            $this->app['request']->server->set('HTTPS', true);
+        }
+
+        // Alternatively, you can force HTTPS always (uncomment if needed)
+        // URL::forceScheme('https');
     }
 }

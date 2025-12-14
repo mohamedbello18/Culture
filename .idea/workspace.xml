@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Just prepared deployment fils" />
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Revert &quot;Resolving &lt;&lt; Could not open input file: artisan &gt;&gt;&quot;&#10;&#10;This reverts commit 1f196b6cdbcceec568bdb5ac24240ab6b4c08e0e.&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Dockerfile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deply.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,15 +242,7 @@
       <option name="project" value="LOCAL" />
       <updated>1765714322868</updated>
     </task>
-    <task id="LOCAL-00003" summary="Just prepared deployment fils">
-      <option name="closed" value="true" />
-      <created>1765715243722</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1765715243722</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +261,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Features updates and rebase of the web application" />
-    <MESSAGE value="Just prepared deployment fils" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just prepared deployment fils" />
+    <option name="LAST_COMMIT_MESSAGE" value="Features updates and rebase of the web application" />
   </component>
 </project>
