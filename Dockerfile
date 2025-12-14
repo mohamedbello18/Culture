@@ -35,12 +35,11 @@ RUN a2enmod rewrite
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy composer files and install dependencies
-COPY --chown=www-data:www-data composer.json composer.lock ./
-RUN composer install --no-interaction --optimize-autoloader --no-dev
-
-# Copy application code
+# CRITICAL FIX: Copy all application files BEFORE running composer install
 COPY --chown=www-data:www-data . .
+
+# Now run composer install, artisan file will be available
+RUN composer install --no-interaction --optimize-autoloader --no-dev
 
 # Copy built assets from the node_assets stage
 COPY --from=node_assets /app/public .

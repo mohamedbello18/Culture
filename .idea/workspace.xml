@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Features updates and rebase of the web application">
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Updating the project for last modifications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +223,7 @@
       <workItem from="1765697684012" duration="427000" />
       <workItem from="1765699573217" duration="199000" />
       <workItem from="1765699880366" duration="592000" />
-      <workItem from="1765700585900" duration="318000" />
+      <workItem from="1765700585900" duration="1520000" />
     </task>
     <task id="LOCAL-00001" summary="Features updates and rebase of the web application">
       <option name="closed" value="true" />
@@ -233,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765699705333</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updating the project for last modifications">
+      <option name="closed" value="true" />
+      <created>1765700977410</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765700977413</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +260,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Features updates and rebase of the web application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Features updates and rebase of the web application" />
+    <MESSAGE value="Updating the project for last modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating the project for last modifications" />
   </component>
 </project>
