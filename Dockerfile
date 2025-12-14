@@ -36,8 +36,7 @@ WORKDIR /var/www/html
 # Copy application files
 COPY --chown=www-data:www-data . .
 
-# Create the .env file
-RUN cp .env.example .env
+# DO NOT create a .env file. Render will inject environment variables.
 
 # Install dependencies
 RUN composer install --no-interaction --optimize-autoloader --no-dev
