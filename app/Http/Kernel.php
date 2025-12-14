@@ -26,7 +26,7 @@ class Kernel extends HttpKernel
         // =========================================================
         // AJOUT CRUCIAL : Lier l'alias 'auth.admin' à la classe
         // =========================================================
-        'auth.admin' => \App\Http\Middleware\CheckAdminRole::class, 
+        'auth.admin' => \App\Http\Middleware\CheckAdminRole::class,
         // =========================================================
     ];
 
