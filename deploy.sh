@@ -12,13 +12,8 @@ php artisan cache:clear
 php artisan view:clear
 php artisan route:clear
 php artisan config:cache
-php artisan route:cache
 php artisan view:cache
 php artisan event:cache
-
-# Run database migrations
-echo "⬆️ Running database migrations..."
-php artisan migrate --force
 
 # Set correct permissions for storage and bootstrap cache
 echo "🔒 Setting file permissions..."
