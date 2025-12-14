@@ -27,9 +27,7 @@ RUN apt-get update && apt-get install -y \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set up Apache
-# Point Apache to the public directory
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
-# Enable rewrite module
 RUN a2enmod rewrite
 
 # Set working directory
@@ -47,10 +45,11 @@ RUN composer install --no-interaction --optimize-autoloader --no-dev
 # Copy built assets from the node_assets stage
 COPY --from=node_assets /app/public/build ./public/build
 
-# Set correct permissions for storage and bootstrap cache
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+# Copy the entrypoint script and make it executable
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# Expose port 80 and start apache
+# Expose port 80 and set the entrypoint
 EXPOSE 80
+ENTRYPOINT ["entrypoint.sh"]
 CMD ["apache2-foreground"]
