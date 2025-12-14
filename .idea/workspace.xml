@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Correction">
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Features updates and rebase of the web application">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,9 +156,6 @@
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -207,10 +197,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <method v="2" />
-    </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
@@ -237,7 +223,7 @@
       <workItem from="1765697684012" duration="427000" />
       <workItem from="1765699573217" duration="199000" />
       <workItem from="1765699880366" duration="592000" />
-      <workItem from="1765700585900" duration="1520000" />
+      <workItem from="1765700585900" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="Features updates and rebase of the web application">
       <option name="closed" value="true" />
@@ -247,159 +233,7 @@
       <option name="project" value="LOCAL" />
       <updated>1765699705333</updated>
     </task>
-    <task id="LOCAL-00002" summary="Updating the project for last modifications">
-      <option name="closed" value="true" />
-      <created>1765700977410</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1765700977413</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Correction for render deployment apache errors">
-      <option name="closed" value="true" />
-      <created>1765705861445</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1765705861445</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Correction for php slient crash even though deployment is suceessful errors">
-      <option name="closed" value="true" />
-      <created>1765706157077</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1765706157077</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Resolving &lt;&lt;  Unable to prepare route [confirm-password] for serialization. Another route has already been assigned name [password.confirm]. &gt;&gt;  errors">
-      <option name="closed" value="true" />
-      <created>1765706658351</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1765706658351</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Correcting typo in entrypoint.sh file">
-      <option name="closed" value="true" />
-      <created>1765706963196</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1765706963197</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Removing the new .env creation process">
-      <option name="closed" value="true" />
-      <created>1765707290898</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1765707290898</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Adding SSL to databse config">
-      <option name="closed" value="true" />
-      <created>1765708285412</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1765708285412</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Adding SSL to database.php config and Dockrfile">
-      <option name="closed" value="true" />
-      <created>1765708593908</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1765708593908</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Resolving errors falgged by IDE">
-      <option name="closed" value="true" />
-      <created>1765709281154</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1765709281154</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Adding required runtime property">
-      <option name="closed" value="true" />
-      <created>1765709317395</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1765709317395</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Correctign error framework &lt;, 1.&#10;                              In your Dockerfile, we copy your application, which includes the necessary folders like storage/framework, storage/logs, etc.&#10;                              2.&#10;                              When you deploy, Render attaches your persistent disk, mounting it over /var/www/html/storage.&#10;                              3.&#10;                              This disk is initially empty. It effectively deletes the framework and logs subdirectories that Laravel absolutely needs to write cache files, session data, and logs.&#10;                              4.&#10;                              When a real request comes in, Laravel tries to write a log or a compiled view, finds that the directory doesn't exist, and the entire PHP process crashes instantly. It crashes so fast it can't even write an error to the log file.&gt;&gt;">
-      <option name="closed" value="true" />
-      <created>1765709766783</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1765709766783</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Checking the duplicate route">
-      <option name="closed" value="true" />
-      <created>1765710264101</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1765710264101</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Correction">
-      <option name="closed" value="true" />
-      <created>1765711226326</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1765711226326</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Correction">
-      <option name="closed" value="true" />
-      <created>1765711285211</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1765711285211</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Correction">
-      <option name="closed" value="true" />
-      <created>1765711891018</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1765711891018</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Correction">
-      <option name="closed" value="true" />
-      <created>1765712086774</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1765712086774</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Correction">
-      <option name="closed" value="true" />
-      <created>1765712464990</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1765712464990</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Correction">
-      <option name="closed" value="true" />
-      <created>1765713263328</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1765713263328</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Correction">
-      <option name="closed" value="true" />
-      <created>1765713535558</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1765713535558</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,20 +252,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Features updates and rebase of the web application" />
-    <MESSAGE value="Updating the project for last modifications" />
-    <MESSAGE value="Correction for render deployment apache errors" />
-    <MESSAGE value="Correction for php slient crash even though deployment is suceessful errors" />
-    <MESSAGE value="Resolving &lt;&lt;  Unable to prepare route [confirm-password] for serialization. Another route has already been assigned name [password.confirm]. &gt;&gt;  errors" />
-    <MESSAGE value="Correcting typo in entrypoint.sh file" />
-    <MESSAGE value="Removing the new .env creation process" />
-    <MESSAGE value="Adding SSL to databse config" />
-    <MESSAGE value="Adding SSL to database.php config and Dockrfile" />
-    <MESSAGE value="SSL Aiven Certificae" />
-    <MESSAGE value="Resolving errors falgged by IDE" />
-    <MESSAGE value="Adding required runtime property" />
-    <MESSAGE value="Correctign error framework &lt;, 1.&#10;                              In your Dockerfile, we copy your application, which includes the necessary folders like storage/framework, storage/logs, etc.&#10;                              2.&#10;                              When you deploy, Render attaches your persistent disk, mounting it over /var/www/html/storage.&#10;                              3.&#10;                              This disk is initially empty. It effectively deletes the framework and logs subdirectories that Laravel absolutely needs to write cache files, session data, and logs.&#10;                              4.&#10;                              When a real request comes in, Laravel tries to write a log or a compiled view, finds that the directory doesn't exist, and the entire PHP process crashes instantly. It crashes so fast it can't even write an error to the log file.&gt;&gt;" />
-    <MESSAGE value="Checking the duplicate route" />
-    <MESSAGE value="Correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Features updates and rebase of the web application" />
   </component>
 </project>
