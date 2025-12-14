@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Correction for php slient crash even though deployment is suceessful errors">
-      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
+    <list default="true" id="5df3a4fc-e3c9-4405-93ae-932f35c347d1" name="Changes" comment="Removing the new .env creation process">
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +257,31 @@
       <option name="project" value="LOCAL" />
       <updated>1765706157077</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Resolving &lt;&lt;  Unable to prepare route [confirm-password] for serialization. Another route has already been assigned name [password.confirm]. &gt;&gt;  errors">
+      <option name="closed" value="true" />
+      <created>1765706658351</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765706658351</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Correcting typo in entrypoint.sh file">
+      <option name="closed" value="true" />
+      <created>1765706963196</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765706963197</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Removing the new .env creation process">
+      <option name="closed" value="true" />
+      <created>1765707290898</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765707290898</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +303,9 @@
     <MESSAGE value="Updating the project for last modifications" />
     <MESSAGE value="Correction for render deployment apache errors" />
     <MESSAGE value="Correction for php slient crash even though deployment is suceessful errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction for php slient crash even though deployment is suceessful errors" />
+    <MESSAGE value="Resolving &lt;&lt;  Unable to prepare route [confirm-password] for serialization. Another route has already been assigned name [password.confirm]. &gt;&gt;  errors" />
+    <MESSAGE value="Correcting typo in entrypoint.sh file" />
+    <MESSAGE value="Removing the new .env creation process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing the new .env creation process" />
   </component>
 </project>

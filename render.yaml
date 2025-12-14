@@ -40,6 +40,8 @@ services:
       - fromSecret:
           key: STRIPE_SECRET
           name: stripe-secret
+      - key: MYSQL_ATTR_SSL_CA
+        value: /etc/ssl/certs/ca-certificates.crt
     healthCheckPath: /
     autoDeploy: true
     buildFilter:
