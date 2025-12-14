@@ -1,62 +1,26 @@
-# The 'blueprint' that defines the services for your app
 services:
-  # A web service for your Laravel application
   - type: web
     name: laravel-app
-    # Use the 'php' environment
-    env: php
-    # Build commands to run on deploy
-    buildCommand: |
-      composer install --no-dev --no-interaction --optimize-autoloader
-      npm install
-      npm run build
-      php artisan key:generate --force
-      php artisan migrate --force
-    # Start command to run the application
-    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    region: frankfurt
+    plan: free
     envVars:
-      - key: APP_URL
-        # The public URL of your web service
-        fromService:
-          type: web
-          name: laravel-app
-          property: url
-      - key: APP_KEY # Will be set by the buildCommand
-        value: ""
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
         value: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: APP_KEY
+        sync: false  # Set this to your actual key in Render dashboard
+      - key: APP_URL
+        value: https://culturebenin-op79.onrender.com
       - key: DB_CONNECTION
-        value: mysql
-      - key: DB_HOST
-        # The internal hostname of the database service
-        fromService:
-          type: pserv
-          name: mysql-db
-          property: host
-      - key: DB_DATABASE
-        fromService:
-          type: pserv
-          name: mysql-db
-          property: database
-      - key: DB_USERNAME
-        fromService:
-          type: pserv
-          name: mysql-db
-          property: user
-      - key: DB_PASSWORD
-        fromService:
-          type: pserv
-          name: mysql-db
-          property: password
-
-  # A private MySQL database service
-  - type: pserv
-    name: mysql-db
-    # Use the 'mysql' environment
-    env: mysql
-    # Specify the MySQL version
-    plan: free # Or your desired plan
-    # You can specify a version, e.g., '8'
-    # version: '8'
+        value: sqlite  # Or configure your database
+    healthCheckPath: /
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - "**/*"
