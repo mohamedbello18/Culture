@@ -9,66 +9,66 @@
             <div class="carousel-slider">
                 <!-- Image 1 : Ganvié - Venise de l'Afrique -->
                 <div class="carousel-slide active">
-                    <img src="{{ asset('images/culture-benin-1.jpg') }}" 
-                         alt="Ganvié - La Venise de l'Afrique" 
+                    <img src="{{ asset('images/culture-benin-1.jpg') }}"
+                         alt="Ganvié - La Venise de l'Afrique"
                          class="carousel-img"
                          loading="eager">
                     <div class="carousel-caption">
                         <h3>La Porte du Nom Retoure</h3>
-                        
+
                     </div>
                     <div class="carousel-overlay"></div>
                 </div>
-                
+
                 <!-- Image 2 : Palais royaux d'Abomey -->
                 <div class="carousel-slide">
-                    <img src="{{ asset('images/culture-benin-2.jpg') }}" 
-                         alt="Palais royaux d'Abomey" 
+                    <img src="{{ asset('images/culture-benin-2.jpg') }}"
+                         alt="Palais royaux d'Abomey"
                          class="carousel-img"
                          loading="eager">
                     <div class="carousel-caption">
                         <h3>Palais des Congrès</h3>
-                        
+
                     </div>
                     <div class="carousel-overlay"></div>
                 </div>
-                
+
                 <!-- Image 3 : Fête du Vodun -->
                 <div class="carousel-slide">
-                    <img src="{{ asset('images/culture-benin-3.jpg') }}" 
-                         alt="Fête du Vodun" 
+                    <img src="{{ asset('images/culture-benin-3.jpg') }}"
+                         alt="Fête du Vodun"
                          class="carousel-img"
                          loading="lazy">
                     <div class="carousel-caption">
                         <h3>La Route des Pêches</h3>
-                        
+
                     </div>
                     <div class="carousel-overlay"></div>
                 </div>
 
                 <!-- Image 4 : Fête du Vodun -->
                 <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1518991669955-9c7e78ec80d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                         alt="Fête du Vodun" 
+                    <img src="https://images.unsplash.com/photo-1518991669955-9c7e78ec80d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                         alt="Fête du Vodun"
                          class="carousel-img"
                          loading="lazy">
                     <div class="carousel-overlay"></div>
                 </div>
-                
+
                 <!-- Image cinq : Artisanat béninois -->
                 <div class="carousel-slide">
-                    <img src="{{ asset('images/culture-benin-4.jpg') }}" 
-                         alt="Artisanat béninois" 
+                    <img src="{{ asset('images/culture-benin-4.jpg') }}"
+                         alt="Artisanat béninois"
                          class="carousel-img"
                          loading="lazy">
                     <div class="carousel-caption">
                         <h3>Plage Fidjrossè</h3>
-                        
+
                     </div>
                     <div class="carousel-overlay"></div>
                 </div>
             </div>
-            
+
             <!-- Contrôles du carrousel -->
             <div class="carousel-controls">
                 <button class="carousel-btn prev-btn" aria-label="Image précédente">
@@ -105,7 +105,7 @@
 
             <div class="stats-grid-premium">
                 <div class="stat-card-premium">
-                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #e17000, #ff8c00);">
+                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #006400, #228B22);">
                         <i class="bi bi-journal-richtext stat-icon-premium"></i>
                     </div>
                     <div class="stat-content">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <div class="stat-card-premium">
-                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #0d6efd, #6ea8fe);">
+                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
                         <i class="bi bi-images stat-icon-premium"></i>
                     </div>
                     <div class="stat-content">
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="stat-card-premium">
-                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #198754, #20c997);">
+                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #191970, #4169E1);">
                         <i class="bi bi-translate stat-icon-premium"></i>
                     </div>
                     <div class="stat-content">
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="stat-card-premium">
-                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #6f42c1, #a370f7);">
+                    <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #4B0082, #8A2BE2);">
                         <i class="bi bi-geo-alt stat-icon-premium"></i>
                     </div>
                     <div class="stat-content">
@@ -165,119 +165,119 @@
                     $contenusRecents = \App\Models\Contenu::with(['typeContenu', 'region', 'langue', 'auteur'])
                         ->where('statut', 'publié')
                         ->orderBy('created_at', 'desc')
-                        ->take(4)
+                        ->take(2)
                         ->get();
                 @endphp
 
                 @forelse($contenusRecents as $contenu)
                     @php
                         $regionColors = [
-                            'Atacora' => '#e17000',
-                            'Donga' => '#008000',
-                            'Borgou' => '#0d6efd',
-                            'Alibori' => '#6f42c1',
-                            'Collines' => '#dc3545',
-                            'Zou' => '#17a2b8',
-                            'Plateau' => '#20c997',
-                            'Ouémé' => '#ffc107',
-                            'Atlantique' => '#fd7e14',
-                            'Littoral' => '#6f42c1',
-                            'Mono' => '#e83e8c',
-                            'Couffo' => '#6610f2'
+                            'Atacora' => '#2F4F4F',
+                            'Donga' => '#228B22',
+                            'Borgou' => '#191970',
+                            'Alibori' => '#4B0082',
+                            'Collines' => '#8B0000',
+                            'Zou' => '#006400',
+                            'Plateau' => '#20B2AA',
+                            'Ouémé' => '#DAA520',
+                            'Atlantique' => '#B8860B',
+                            'Littoral' => '#8B4513',
+                            'Mono' => '#8B008B',
+                            'Couffo' => '#483D8B'
                         ];
-                        $regionColor = $regionColors[$contenu->region->nom_region ?? ''] ?? '#0d6efd';
+                        $regionColor = $regionColors[$contenu->region->nom_region ?? ''] ?? '#191970';
                     @endphp
-                
-                <div class="preview-card-premium">
-                    <!-- Header coloré -->
-                    <div class="preview-header" style="background: {{ $regionColor }};">
-                        <div class="header-overlay-light"></div>
-                        <div class="header-content">
-                            <div class="type-badge">
-                                <i class="bi bi-tag-fill me-1"></i>
-                                {{ $contenu->typeContenu->nom ?? 'Article' }}
-                            </div>
-                            <h3 class="preview-title">{{ Str::limit($contenu->titre, 50) }}</h3>
-                        </div>
-                    </div>
 
-                    <!-- Corps de la carte -->
-                    <div class="preview-body">
-                        <p class="preview-text">
-                            {{ Str::limit(strip_tags($contenu->texte), 120) }}
-                        </p>
-                        
-                        <div class="preview-meta-grid">
-                            <div class="meta-item">
-                                <div class="meta-icon">
-                                    <i class="bi bi-person-circle"></i>
+                    <div class="preview-card-premium">
+                        <!-- Header coloré -->
+                        <div class="preview-header" style="background: {{ $regionColor }};">
+                            <div class="header-overlay-light"></div>
+                            <div class="header-content">
+                                <div class="type-badge">
+                                    <i class="bi bi-tag-fill me-1"></i>
+                                    {{ $contenu->typeContenu->nom ?? 'Article' }}
                                 </div>
-                                <div class="meta-content">
-                                    <div class="meta-label">Auteur</div>
-                                    <div class="meta-value">{{ $contenu->auteur->prenom ?? 'Anonyme' }}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="meta-item">
-                                <div class="meta-icon">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                </div>
-                                <div class="meta-content">
-                                    <div class="meta-label">Région</div>
-                                    <div class="meta-value">{{ $contenu->region->nom_region ?? 'Bénin' }}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="meta-item">
-                                <div class="meta-icon">
-                                    <i class="bi bi-calendar-event"></i>
-                                </div>
-                                <div class="meta-content">
-                                    <div class="meta-label">Date</div>
-                                    <div class="meta-value">{{ $contenu->created_at->format('d/m/Y') }}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="meta-item">
-                                <div class="meta-icon">
-                                    <i class="bi bi-chat-left-text"></i>
-                                </div>
-                                <div class="meta-content">
-                                    <div class="meta-label">Langue</div>
-                                    <div class="meta-value">{{ $contenu->langue->nom_langue ?? 'Français' }}</div>
-                                </div>
+                                <h3 class="preview-title">{{ Str::limit($contenu->titre, 50) }}</h3>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Footer avec bouton -->
-                    <div class="preview-footer">
-                        <a href="{{ route('contenus.show', $contenu->id_contenu) }}" class="preview-btn">
-                            <i class="bi bi-eye me-2"></i>
-                            Lire l'article
-                        </a>
-                        <span class="time-ago">
+                        <!-- Corps de la carte -->
+                        <div class="preview-body">
+                            <p class="preview-text">
+                                {{ Str::limit(strip_tags($contenu->texte), 120) }}
+                            </p>
+
+                            <div class="preview-meta-grid">
+                                <div class="meta-item">
+                                    <div class="meta-icon">
+                                        <i class="bi bi-person-circle"></i>
+                                    </div>
+                                    <div class="meta-content">
+                                        <div class="meta-label">Auteur</div>
+                                        <div class="meta-value">{{ $contenu->auteur->prenom ?? 'Anonyme' }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="meta-item">
+                                    <div class="meta-icon">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div class="meta-content">
+                                        <div class="meta-label">Région</div>
+                                        <div class="meta-value">{{ $contenu->region->nom_region ?? 'Bénin' }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="meta-item">
+                                    <div class="meta-icon">
+                                        <i class="bi bi-calendar-event"></i>
+                                    </div>
+                                    <div class="meta-content">
+                                        <div class="meta-label">Date</div>
+                                        <div class="meta-value">{{ $contenu->created_at->format('d/m/Y') }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="meta-item">
+                                    <div class="meta-icon">
+                                        <i class="bi bi-chat-left-text"></i>
+                                    </div>
+                                    <div class="meta-content">
+                                        <div class="meta-label">Langue</div>
+                                        <div class="meta-value">{{ $contenu->langue->nom_langue ?? 'Français' }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer avec bouton -->
+                        <div class="preview-footer">
+                            <a href="{{ route('contenus.show', $contenu->id_contenu) }}" class="preview-btn">
+                                <i class="bi bi-eye me-2"></i>
+                                Lire l'article
+                            </a>
+                            <span class="time-ago">
                             <i class="bi bi-clock-history me-1"></i>
                             {{ $contenu->created_at->diffForHumans() }}
                         </span>
-                    </div>
-                </div>
-                @empty
-                <div class="preview-card-premium empty">
-                    <div class="preview-header" style="background: #6c757d;">
-                        <div class="header-content text-center">
-                            <i class="bi bi-journal-text" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-                            <h3 class="preview-title">Aucun contenu récent</h3>
                         </div>
                     </div>
-                    <div class="preview-body text-center">
-                        <p class="preview-text">De nouveaux contenus seront bientôt publiés</p>
-                        <a href="{{ route('user.contenus.create') }}" class="preview-btn">
-                            <i class="bi bi-plus-circle me-2"></i>
-                            Créer un contenu
-                        </a>
+                @empty
+                    <div class="preview-card-premium empty">
+                        <div class="preview-header" style="background: #696969;">
+                            <div class="header-content text-center">
+                                <i class="bi bi-journal-text" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                                <h3 class="preview-title">Aucun contenu récent</h3>
+                            </div>
+                        </div>
+                        <div class="preview-body text-center">
+                            <p class="preview-text">De nouveaux contenus seront bientôt publiés</p>
+                            <a href="{{ route('user.contenus.create') }}" class="preview-btn">
+                                <i class="bi bi-plus-circle me-2"></i>
+                                Créer un contenu
+                            </a>
+                        </div>
                     </div>
-                </div>
                 @endforelse
             </div>
         </div>
@@ -307,11 +307,11 @@
                     @php
                         $mediaType = $media->typeMedia->nom ?? 'Document';
                         $typeColors = [
-                            'Image' => '#0d6efd',
-                            'Vidéo' => '#198754',
-                            'Audio' => '#6f42c1',
-                            'PDF' => '#dc3545',
-                            'Document' => '#6c757d'
+                            'Image' => '#228B22',
+                            'Vidéo' => '#191970',
+                            'Audio' => '#8B4513',
+                            'PDF' => '#8B0000',
+                            'Document' => '#696969'
                         ];
                         $typeIcons = [
                             'Image' => 'bi-image',
@@ -320,115 +320,117 @@
                             'PDF' => 'bi-file-earmark-pdf',
                             'Document' => 'bi-file-earmark-text'
                         ];
-                        $typeColor = $typeColors[$mediaType] ?? '#6c757d';
+                        $typeColor = $typeColors[$mediaType] ?? '#696969';
                         $typeIcon = $typeIcons[$mediaType] ?? 'bi-file-earmark';
                     @endphp
-                
-                <div class="media-card-premium">
-                    <!-- Thumbnail -->
-                    <div class="media-thumbnail-premium">
-                        @if($mediaType == 'Image' && Storage::exists($media->Chemin))
-                            <div class="thumbnail-container">
-                                <img src="{{ Storage::url($media->Chemin) }}" 
-                                    alt="{{ $media->description }}"
-                                    class="media-image"
-                                    loading="lazy">
-                                <div class="thumbnail-overlay">
-                                    <a href="{{ route('medias.show', $media->id_media) }}" class="overlay-btn">
-                                        <i class="bi bi-eye-fill"></i>
-                                    </a>
+
+                    <div class="media-card-premium">
+                        <!-- Thumbnail -->
+                        <div class="media-thumbnail-premium">
+                            @if($mediaType == 'Image' && Storage::exists($media->Chemin))
+                                <div class="thumbnail-container">
+                                    <img src="{{ Storage::url($media->Chemin) }}"
+                                         alt="{{ $media->description }}"
+                                         class="media-image"
+                                         loading="lazy">
+                                    <div class="thumbnail-overlay">
+                                        <a href="{{ route('medias.show', $media->id_media) }}" class="overlay-btn">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        @else
-                            <div class="media-placeholder" style="border-color: {{ $typeColor }};">
-                                <div class="placeholder-icon" style="color: {{ $typeColor }};">
-                                    <i class="bi {{ $typeIcon }}"></i>
+                            @else
+                                <div class="media-placeholder" style="border-color: {{ $typeColor }};">
+                                    <div class="placeholder-icon" style="color: {{ $typeColor }};">
+                                        <i class="bi {{ $typeIcon }}"></i>
+                                    </div>
+                                    <div class="placeholder-text">{{ $mediaType }}</div>
                                 </div>
-                                <div class="placeholder-text">{{ $mediaType }}</div>
-                            </div>
-                        @endif
-                        
-                        <!-- Badges -->
-                        <div class="media-badges">
+                            @endif
+
+                            <!-- Badges -->
+                            <div class="media-badges">
                             <span class="type-badge" style="background: {{ $typeColor }};">
                                 <i class="bi {{ $typeIcon }} me-1"></i>
                                 {{ $mediaType }}
                             </span>
-                            <span class="premium-badge">
+                                <span class="premium-badge">
                                 <i class="bi bi-star-fill me-1"></i>
                                 Premium
                             </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Contenu -->
-                    <div class="media-content-premium">
-                        <h4 class="media-title">
-                            <a href="{{ route('media.show', $media->id_media) }}">
-                                {{ Str::limit($media->description, 40) }}
-                            </a>
-                        </h4>
-                        
-                        <div class="media-meta-grid">
-                            <div class="meta-item">
-                                <div class="meta-icon">
-                                    <i class="bi bi-calendar3"></i>
+                        <!-- Contenu -->
+                        <div class="media-content-premium">
+                            <h4 class="media-title">
+                                <a href="{{ route('media.show', $media->id_media) }}">
+                                    {{ Str::limit($media->description, 40) }}
+                                </a>
+                            </h4>
+
+                            <div class="media-meta-grid">
+                                <div class="meta-item">
+                                    <div class="meta-icon">
+                                        <i class="bi bi-calendar3"></i>
+                                    </div>
+                                    <div class="meta-content">
+                                        <div class="meta-label">Ajouté</div>
+                                        <div class="meta-value">{{ $media->created_at->format('d/m/Y') }}</div>
+                                    </div>
                                 </div>
-                                <div class="meta-content">
-                                    <div class="meta-label">Ajouté</div>
-                                    <div class="meta-value">{{ $media->created_at->format('d/m/Y') }}</div>
+
+                                <div class="meta-item">
+                                    <div class="meta-icon">
+                                        <i class="bi bi-person-circle"></i>
+                                    </div>
+                                    <div class="meta-content">
+                                        <div class="meta-label">Par</div>
+                                        <div class="meta-value">{{ $media->user->prenom ?? 'Anonyme' }}</div>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <div class="meta-item">
-                                <div class="meta-icon">
-                                    <i class="bi bi-person-circle"></i>
+
+                            <div class="media-footer">
+                                <div class="price-tag">
+                                    <i class="bi bi-coin"></i>
+                                    <span></span>
                                 </div>
-                                <div class="meta-content">
-                                    <div class="meta-label">Par</div>
-                                    <div class="meta-value">{{ $media->user->prenom ?? 'Anonyme' }}</div>
-                                </div>
+                                <a href="{{ route('media.show', $media->id_media) }}" class="media-btn">
+                                    <i class="bi bi-eye me-2"></i>
+                                    Voir
+                                </a>
                             </div>
-                        </div>
-                        
-                        <div class="media-footer">
-                            <div class="price-tag">
-                                <i class="bi bi-coin"></i>
-                                <span></span>
-                            </div>
-                            <a href="{{ route('media.show', $media->id_media) }}" class="media-btn">
-                                <i class="bi bi-eye me-2"></i>
-                                Voir
-                            </a>
                         </div>
                     </div>
-                </div>
                 @empty
-                <div class="media-card-premium empty">
-                    <div class="media-thumbnail-premium">
-                        <div class="media-placeholder" style="border-color: #6c757d;">
-                            <div class="placeholder-icon" style="color: #6c757d;">
-                                <i class="bi bi-images"></i>
+                    <div class="media-card-premium empty">
+                        <div class="media-thumbnail-premium">
+                            <div class="media-placeholder" style="border-color: #696969;">
+                                <div class="placeholder-icon" style="color: #696969;">
+                                    <i class="bi bi-images"></i>
+                                </div>
+                                <div class="placeholder-text">Aucun média</div>
                             </div>
-                            <div class="placeholder-text">Aucun média</div>
+                        </div>
+                        <div class="media-content-premium text-center">
+                            <h4 class="media-title">Galerie vide</h4>
+                            <p class="media-description">Notre galerie sera bientôt enrichie</p>
+                            <a href="{{ route('user.medias.create') }}" class="media-btn">
+                                <i class="bi bi-cloud-upload me-2"></i>
+                                Uploader un média
+                            </a>
                         </div>
                     </div>
-                    <div class="media-content-premium text-center">
-                        <h4 class="media-title">Galerie vide</h4>
-                        <p class="media-description">Notre galerie sera bientôt enrichie</p>
-                        <a href="{{ route('user.medias.create') }}" class="media-btn">
-                            <i class="bi bi-cloud-upload me-2"></i>
-                            Uploader un média
-                        </a>
-                    </div>
-                </div>
                 @endforelse
             </div>
         </div>
     </section>
 
     <style>
-        /* ===== CORRECTIONS GÉNÉRALES ===== */
+        /* ===== NEW FONT FAMILY ===== */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600&display=swap');
+
         * {
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
@@ -436,10 +438,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        /* ===== CARROUSEL AMÉLIORÉ ===== */
+        /* ===== NEW CARROUSEL STYLING ===== */
         .carousel-container {
             position: absolute;
             top: 0;
@@ -463,7 +465,7 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.2s ease-in-out;
         }
 
         .carousel-slide.active {
@@ -474,52 +476,56 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            animation: zoomOut 15s ease-in-out infinite;
-            filter: brightness(0.9);
+            animation: fadeZoom 20s ease-in-out infinite;
+            filter: brightness(0.8) contrast(1.1);
         }
 
-        @keyframes zoomOut {
+        @keyframes fadeZoom {
             0% {
-                transform: scale(1.05);
+                transform: scale(1);
+                filter: brightness(0.8) contrast(1.1);
+            }
+            50% {
+                transform: scale(1.08);
+                filter: brightness(0.9) contrast(1.2);
             }
             100% {
                 transform: scale(1);
+                filter: brightness(0.8) contrast(1.1);
             }
         }
 
         .carousel-caption {
             position: absolute;
-            bottom: 120px;
-            left: 0;
-            width: 100%;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 800px;
             text-align: center;
             z-index: 10;
             color: white;
-            padding: 0 2rem;
+            padding: 1.5rem 2rem;
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease 0.3s;
+            transition: all 0.8s ease 0.4s;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .carousel-slide.active .carousel-caption {
             opacity: 1;
-            transform: translateY(0);
         }
 
         .carousel-caption h3 {
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-family: 'Roboto Slab', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .carousel-caption p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            max-width: 600px;
-            margin: 0 auto;
-            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-            opacity: 0.9;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
         }
 
         .carousel-overlay {
@@ -528,128 +534,171 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+            background: linear-gradient(135deg, rgba(25, 25, 112, 0.3), rgba(34, 139, 34, 0.2));
         }
 
         .carousel-controls {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 0;
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 0 3rem;
+            gap: 20px;
             z-index: 10;
         }
 
         .carousel-btn {
-            background: rgba(255, 255, 255, 0.25);
-            border: 2px solid rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(8px);
             font-weight: 600;
             outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .carousel-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: scale(1.1);
-            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+            background: rgba(34, 139, 34, 0.7);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(34, 139, 34, 0.4);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
-        .carousel-btn:focus {
-            box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.5);
-        }
-
-        /* ===== HERO SECTION AMÉLIORÉE ===== */
+        /* ===== HERO SECTION - COMPLETELY REDESIGNED ===== */
         .hero-section {
             position: relative;
             height: 100vh;
-            min-height: 600px;
+            min-height: 700px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             overflow: hidden;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(135deg, #0a1929 0%, #1a3a5f 100%);
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            max-width: 800px;
-            padding: 0 2rem;
+            max-width: 850px;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.8rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            margin-bottom: 1.8rem;
+            line-height: 1.15;
             letter-spacing: -0.5px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-        }
-
-        .hero-accent {
-            color: #ffa94d;
-            background: linear-gradient(45deg, #ff8c00, #ffd700);
+            background: linear-gradient(45deg, #FFFFFF, #90EE90);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: none;
+            text-shadow: 0 4px 30px rgba(144, 238, 144, 0.3);
+        }
+
+        .hero-accent {
+            display: block;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #228B22, #90EE90);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            margin-top: 0.5rem;
+        }
+
+        .hero-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, #228B22, #90EE90);
+            border-radius: 2px;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-            opacity: 0.95;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            opacity: 0.9;
             font-weight: 400;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            color: #E0E0E0;
+            padding: 0 2rem;
         }
 
         .btn-hero {
             display: inline-flex;
             align-items: center;
-            background: linear-gradient(135deg, #e17000, #ff8c00);
+            background: linear-gradient(135deg, #228B22, #32CD32);
             color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
             font-weight: 700;
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(225, 112, 0, 0.4);
+            font-size: 1.2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 30px rgba(34, 139, 34, 0.4);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
         }
 
         .btn-hero:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(225, 112, 0, 0.5);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(34, 139, 34, 0.6);
             color: white;
         }
 
-        /* ===== STATISTIQUES PREMIUM ===== */
+        .btn-hero:hover::before {
+            left: 100%;
+        }
+
+        /* ===== STATISTICS SECTION - DARK THEME ===== */
         .stats-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
             color: white;
-            padding: 6rem 0;
+            padding: 8rem 0;
             position: relative;
             overflow: hidden;
         }
@@ -661,9 +710,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff10" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: cover;
-            opacity: 0.1;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(34, 139, 34, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(25, 25, 112, 0.15) 0%, transparent 50%);
         }
 
         .stats-container {
@@ -676,78 +725,106 @@
         }
 
         .section-title {
-            font-size: 2.75rem;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.2rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            color: white;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, #228B22, #191970);
+            border-radius: 3px;
         }
 
         .section-subtitle {
-            font-size: 1.2rem;
-            color: #cbd5e1;
-            margin-bottom: 4rem;
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: #B0B0B0;
+            margin-bottom: 5rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
-            font-weight: 400;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
         }
 
-        /* Grille de statistiques premium */
+        /* New Statistics Grid */
         .stats-grid-premium {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
 
         .stat-card-premium {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
+            padding: 2.5rem 2rem;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .stat-card-premium::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #228B22, #191970, #8B4513);
+            z-index: -1;
+            border-radius: 22px;
+            opacity: 0;
+            transition: opacity 0.5s;
         }
 
         .stat-card-premium:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-card-premium:hover::before {
+            opacity: 1;
         }
 
         .stat-icon-wrapper {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s;
+        }
+
+        .stat-card-premium:hover .stat-icon-wrapper {
+            transform: rotate(15deg) scale(1.1);
         }
 
         .stat-icon-premium {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: white;
         }
 
@@ -756,122 +833,148 @@
         }
 
         .stat-number-premium {
-            font-size: 3rem;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.8rem;
             font-weight: 900;
-            margin-bottom: 0.5rem;
-            color: white;
+            margin-bottom: 0.8rem;
+            color: #FFFFFF;
             line-height: 1;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #FFFFFF, #90EE90);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .stat-label-premium {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: white;
+            margin-bottom: 0.8rem;
+            color: #FFFFFF;
             letter-spacing: 0.5px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .stat-description {
-            font-size: 0.9rem;
-            color: #cbd5e1;
-            opacity: 0.8;
+            font-size: 0.95rem;
+            color: #B0B0B0;
+            opacity: 0.9;
+            font-weight: 300;
         }
 
-        /* ===== SECTION HEADER AMÉLIORÉ ===== */
+        /* ===== SECTION HEADER STYLING ===== */
         .section-header {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             text-align: center;
             position: relative;
         }
 
         .section-title-dark {
-            font-size: 2.5rem;
+            font-family: 'Roboto Slab', serif;
+            font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            color: #1a1d21;
+            margin-bottom: 1.2rem;
+            color: #1a1a2e;
             letter-spacing: -0.5px;
             position: relative;
             display: inline-block;
         }
 
-        .section-title-dark::after {
+        .section-title-dark::before {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #e17000, #ff8c00);
-            border-radius: 2px;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, #228B22, #191970);
+            border-radius: 3px;
         }
 
         .section-subtitle-dark {
-            font-size: 1.1rem;
-            color: #6c757d;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            font-size: 1.15rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
             font-weight: 400;
+            font-family: 'Poppins', sans-serif;
         }
 
         .section-view-all {
             display: inline-flex;
             align-items: center;
-            color: #0d6efd;
+            color: #228B22;
             font-weight: 700;
             text-decoration: none;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             transition: all 0.3s ease;
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            background: rgba(13, 110, 253, 0.1);
+            font-size: 1.1rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 10px;
+            background: rgba(34, 139, 34, 0.1);
+            border: 2px solid rgba(34, 139, 34, 0.2);
+            font-family: 'Poppins', sans-serif;
         }
 
         .section-view-all:hover {
             color: white;
-            background: #0d6efd;
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+            background: #228B22;
+            transform: translateX(8px);
+            box-shadow: 0 6px 20px rgba(34, 139, 34, 0.3);
+            border-color: #228B22;
         }
 
-        /* ===== CONTENUS RÉCENTS AMÉLIORÉS ===== */
+        /* ===== CONTENT CARDS - NEW DESIGN ===== */
         .content-preview-grid-premium {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .preview-card-premium {
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             height: 100%;
+            position: relative;
+        }
+
+        .preview-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #228B22, #191970);
         }
 
         .preview-card-premium:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         .preview-card-premium.empty {
-            background: #f8f9fa;
+            background: #f5f5f5;
         }
 
         .preview-header {
             position: relative;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             color: white;
-            min-height: 140px;
+            min-height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .header-overlay-light {
@@ -880,76 +983,94 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+            background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
         }
 
         .header-content {
             position: relative;
             z-index: 2;
+            text-align: center;
+            width: 100%;
         }
 
         .type-badge {
             background: rgba(255, 255, 255, 0.25);
             color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
-            margin-bottom: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            font-family: 'Poppins', sans-serif;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .preview-title {
-            font-size: 1.3rem;
-            font-weight: 800;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
             margin: 0;
             color: white;
             line-height: 1.4;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.4);
         }
 
         .preview-body {
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             flex: 1;
         }
 
         .preview-text {
-            color: #495057;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
             font-weight: 400;
+            font-family: 'Poppins', sans-serif;
         }
 
         .preview-meta-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-bottom: 1rem;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .meta-item {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .meta-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
         }
 
         .meta-icon {
-            width: 40px;
-            height: 40px;
-            background: #f8f9fa;
-            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #228B22, #191970);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #e17000;
-            font-size: 1.1rem;
+            color: white;
+            font-size: 1.2rem;
             flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(34, 139, 34, 0.2);
         }
 
         .meta-content {
@@ -959,25 +1080,27 @@
 
         .meta-label {
             font-size: 0.8rem;
-            color: #6c757d;
+            color: #666;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.3rem;
+            font-family: 'Poppins', sans-serif;
         }
 
         .meta-value {
-            font-size: 0.95rem;
-            color: #1a1d21;
+            font-size: 1rem;
+            color: #1a1a2e;
             font-weight: 600;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-family: 'Poppins', sans-serif;
         }
 
         .preview-footer {
-            padding: 1.5rem 2rem;
-            background: #f8f9fa;
+            padding: 1.8rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             border-top: 1px solid rgba(0, 0, 0, 0.08);
             display: flex;
             justify-content: space-between;
@@ -985,66 +1108,79 @@
         }
 
         .preview-btn {
-            background: linear-gradient(135deg, #e17000, #ff8c00);
+            background: linear-gradient(135deg, #228B22, #32CD32);
             color: white;
             border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 10px;
+            padding: 0.9rem 2rem;
+            border-radius: 12px;
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 15px rgba(225, 112, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(34, 139, 34, 0.25);
+            font-family: 'Poppins', sans-serif;
         }
 
         .preview-btn:hover {
-            background: linear-gradient(135deg, #ff8c00, #ffa040);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(225, 112, 0, 0.3);
+            background: linear-gradient(135deg, #191970, #4169E1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(25, 25, 112, 0.35);
             color: white;
         }
 
         .time-ago {
-            font-size: 0.85rem;
-            color: #6c757d;
+            font-size: 0.9rem;
+            color: #666;
             display: flex;
             align-items: center;
             font-weight: 500;
+            font-family: 'Poppins', sans-serif;
         }
 
-        /* ===== MÉDIAS RÉCENTS AMÉLIORÉS ===== */
+        /* ===== MEDIA CARDS - NEW DESIGN ===== */
         .media-grid-premium {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
         .media-card-premium {
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             height: 100%;
+            position: relative;
+        }
+
+        .media-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #191970, #8B4513);
         }
 
         .media-card-premium:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         .media-card-premium.empty {
-            background: #f8f9fa;
+            background: #f5f5f5;
         }
 
         .media-thumbnail-premium {
             position: relative;
-            height: 200px;
+            height: 220px;
             overflow: hidden;
             background: #f8f9fa;
         }
@@ -1059,7 +1195,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .thumbnail-overlay {
@@ -1068,12 +1204,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(34, 139, 34, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
         }
 
         .thumbnail-container:hover .thumbnail-overlay {
@@ -1081,29 +1217,34 @@
         }
 
         .thumbnail-container:hover .media-image {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         .overlay-btn {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             background: white;
-            color: #0d6efd;
+            color: #228B22;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            transition: transform 0.4s ease 0.1s;
+        }
+
+        .thumbnail-container:hover .overlay-btn {
+            transform: scale(1);
         }
 
         .overlay-btn:hover {
-            background: #0d6efd;
+            background: #191970;
             color: white;
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
+            transform: scale(1.1) rotate(15deg);
         }
 
         .media-placeholder {
@@ -1113,19 +1254,26 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: 3px solid;
-            border-radius: 10px;
+            border: 4px solid;
+            border-radius: 15px;
             background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
         }
 
         .placeholder-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.5s ease;
+        }
+
+        .media-card-premium:hover .placeholder-icon {
+            transform: rotate(20deg) scale(1.1);
         }
 
         .placeholder-text {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
+            color: #333;
         }
 
         .media-badges {
@@ -1140,56 +1288,74 @@
 
         .media-badges .type-badge {
             background: rgba(0, 0, 0, 0.7);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
             font-weight: 700;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .premium-badge {
-            background: linear-gradient(135deg, #ffd700, #ffed4e);
-            color: #856404;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            background: linear-gradient(135deg, #FFD700, #FFEC8B);
+            color: #8B7500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
             font-weight: 800;
             display: inline-flex;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .media-content-premium {
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
         .media-title {
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
             line-height: 1.4;
-            color: #1a1d21;
+            color: #1a1a2e;
         }
 
         .media-title a {
-            color: #1a1d21;
+            color: #1a1a2e;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .media-title a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #228B22;
+            transition: width 0.3s ease;
         }
 
         .media-title a:hover {
-            color: #0d6efd;
+            color: #228B22;
+        }
+
+        .media-title a:hover::after {
+            width: 100%;
         }
 
         .media-meta-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         .media-footer {
@@ -1197,57 +1363,63 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-top: 1.5rem;
+            border-top: 2px solid #f0f0f0;
         }
 
         .price-tag {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
             font-weight: 800;
-            color: #e17000;
-            font-size: 1.1rem;
-            background: rgba(225, 112, 0, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
+            color: #228B22;
+            font-size: 1.2rem;
+            background: rgba(34, 139, 34, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            border: 2px solid rgba(34, 139, 34, 0.2);
+            font-family: 'Poppins', sans-serif;
         }
 
         .price-tag i {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            color: #191970;
         }
 
         .media-btn {
-            background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+            background: linear-gradient(135deg, #191970, #4169E1);
             color: white;
             border: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 10px;
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(25, 25, 112, 0.25);
+            font-family: 'Poppins', sans-serif;
         }
 
         .media-btn:hover {
-            background: linear-gradient(135deg, #6ea8fe, #9ec5fe);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.35);
             color: white;
         }
 
         /* ===== SECTIONS ===== */
         .section-padding {
-            padding: 6rem 0;
+            padding: 8rem 0;
         }
 
         .recent-section {
-            background: #ffffff;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .media-section {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
         }
 
         .container {
@@ -1256,22 +1428,61 @@
             padding: 0 2rem;
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
             .hero-title {
-                font-size: 3rem;
+                font-size: 3.2rem;
             }
-            
+
+            .hero-accent {
+                font-size: 3.5rem;
+            }
+
             .stats-grid-premium {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .carousel-caption h3 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
-            
-            .carousel-caption p {
-                font-size: 1rem;
+        }
+
+        @media (max-width: 992px) {
+            .hero-section {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                padding: 2.5rem;
+                margin: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-accent {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+                padding: 0 1rem;
+            }
+
+            .btn-hero {
+                padding: 1.1rem 2.5rem;
+                font-size: 1.1rem;
+            }
+
+            .section-title,
+            .section-title-dark {
+                font-size: 2.5rem;
+            }
+
+            .section-subtitle,
+            .section-subtitle-dark {
+                font-size: 1.1rem;
             }
         }
 
@@ -1284,13 +1495,17 @@
                 font-size: 2.2rem;
             }
 
+            .hero-accent {
+                font-size: 2.5rem;
+            }
+
             .hero-subtitle {
                 font-size: 1.1rem;
-                padding: 0 1rem;
+                padding: 0;
             }
 
             .btn-hero {
-                padding: 0.9rem 2rem;
+                padding: 1rem 2rem;
                 font-size: 1rem;
             }
 
@@ -1305,36 +1520,145 @@
             }
 
             .carousel-controls {
-                bottom: 30px;
-                padding: 0 2rem;
+                bottom: 20px;
+                gap: 15px;
             }
 
             .carousel-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
             }
 
             .carousel-caption {
-                bottom: 100px;
+                bottom: 80px;
+                padding: 1rem 1.5rem;
             }
-            
+
             .carousel-caption h3 {
-                font-size: 1.5rem;
-            }
-            
-            .carousel-caption p {
-                font-size: 0.9rem;
-                max-width: 90%;
+                font-size: 1.8rem;
             }
 
             .stats-grid-premium {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stat-card-premium {
+                padding: 2rem 1.5rem;
+            }
+
+            .stat-icon-wrapper {
+                width: 80px;
+                height: 80px;
+            }
+
+            .stat-icon-premium {
+                font-size: 2rem;
+            }
+
+            .stat-number-premium {
+                font-size: 3rem;
+            }
+
+            .content-preview-grid-premium,
+            .media-grid-premium {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .preview-meta-grid,
+            .media-meta-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .section-padding {
+                padding: 5rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-accent {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .stats-grid-premium {
                 gap: 1.5rem;
             }
 
             .stat-card-premium {
+                padding: 1.8rem 1.2rem;
+            }
+
+            .stat-number-premium {
+                font-size: 2.5rem;
+            }
+
+            .section-title,
+            .section-title-dark {
+                font-size: 1.8rem;
+            }
+
+            .carousel-controls {
+                bottom: 15px;
+                gap: 10px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .carousel-caption {
+                bottom: 70px;
+                padding: 0.8rem 1.2rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-padding {
+                padding: 4rem 0;
+            }
+
+            .container {
+                padding: 0 1.2rem;
+            }
+
+            .preview-footer,
+            .media-footer {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-content {
                 padding: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .hero-accent {
+                font-size: 1.8rem;
+            }
+
+            .carousel-caption {
+                display: none;
             }
 
             .stat-icon-wrapper {
@@ -1345,91 +1669,12 @@
             .stat-icon-premium {
                 font-size: 1.8rem;
             }
-
-            .stat-number-premium {
-                font-size: 2.5rem;
-            }
-
-            .content-preview-grid-premium,
-            .media-grid-premium {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .preview-meta-grid,
-            .media-meta-grid {
-                grid-template-columns: 1fr;
-                gap: 0.8rem;
-            }
-
-            .section-padding {
-                padding: 4rem 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .stats-grid-premium {
-                gap: 1rem;
-            }
-
-            .stat-card-premium {
-                padding: 1.25rem;
-            }
-
-            .stat-number-premium {
-                font-size: 2rem;
-            }
-
-            .section-title,
-            .section-title-dark {
-                font-size: 1.8rem;
-            }
-
-            .carousel-controls {
-                bottom: 20px;
-                padding: 0 1.5rem;
-            }
-
-            .carousel-btn {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
-            }
-            
-            .carousel-caption {
-                bottom: 90px;
-                padding: 0 1rem;
-            }
-            
-            .carousel-caption h3 {
-                font-size: 1.2rem;
-            }
-            
-            .carousel-caption p {
-                font-size: 0.8rem;
-            }
-
-            .section-padding {
-                padding: 3rem 0;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
         }
     </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // ===== CARROUSEL AUTO (5 secondes) =====
+            // ===== CARROUSEL AUTO (6 secondes) =====
             let currentSlide = 0;
             const slides = document.querySelectorAll('.carousel-slide');
             const totalSlides = slides.length;
@@ -1446,7 +1691,7 @@
             }
 
             function startAutoSlide() {
-                slideInterval = setInterval(nextSlide, 5000); // 5 secondes
+                slideInterval = setInterval(nextSlide, 6000); // 6 secondes
             }
 
             // Démarrer le carrousel auto
@@ -1456,13 +1701,13 @@
             document.querySelector('.next-btn').addEventListener('click', function() {
                 clearInterval(slideInterval);
                 nextSlide();
-                setTimeout(startAutoSlide, 5000);
+                setTimeout(startAutoSlide, 6000);
             });
 
             document.querySelector('.prev-btn').addEventListener('click', function() {
                 clearInterval(slideInterval);
                 goToSlide(currentSlide - 1);
-                setTimeout(startAutoSlide, 5000);
+                setTimeout(startAutoSlide, 6000);
             });
 
             // Navigation clavier
@@ -1470,11 +1715,11 @@
                 if (e.key === 'ArrowLeft') {
                     clearInterval(slideInterval);
                     goToSlide(currentSlide - 1);
-                    setTimeout(startAutoSlide, 5000);
+                    setTimeout(startAutoSlide, 6000);
                 } else if (e.key === 'ArrowRight') {
                     clearInterval(slideInterval);
                     nextSlide();
-                    setTimeout(startAutoSlide, 5000);
+                    setTimeout(startAutoSlide, 6000);
                 }
             });
 
@@ -1491,13 +1736,13 @@
             carousel.addEventListener('touchend', function(e) {
                 touchEndX = e.changedTouches[0].screenX;
                 handleSwipe();
-                setTimeout(startAutoSlide, 5000);
+                setTimeout(startAutoSlide, 6000);
             });
 
             function handleSwipe() {
                 const swipeThreshold = 50;
                 const diff = touchStartX - touchEndX;
-                
+
                 if (Math.abs(diff) > swipeThreshold) {
                     if (diff > 0) {
                         // Swipe gauche -> image suivante
@@ -1518,27 +1763,6 @@
                 startAutoSlide();
             });
 
-            // ===== PRÉCHARGEMENT DES IMAGES LOCALES =====
-            const imageSources = [
-                "{{ asset('images/culture-benin-1.jpg') }}",
-                "{{ asset('images/culture-benin-2.jpg') }}",
-                "{{ asset('images/culture-benin-3.jpg') }}",
-                "{{ asset('https://images.unsplash.com/photo-1518991669955-9c7e78ec80d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') }}",
-                "{{ asset('images/culture-benin-4.jpg') }}",
-                
-            ];
-
-            // Précharger les images
-            function preloadImages() {
-                imageSources.forEach(src => {
-                    const img = new Image();
-                    img.src = src;
-                });
-            }
-
-            // Précharger au chargement
-            preloadImages();
-
             // ===== ANIMATION DES CHIFFRES =====
             function animateCounter(element) {
                 const target = parseInt(element.dataset.count);
@@ -1546,11 +1770,11 @@
                     element.textContent = '0';
                     return;
                 }
-                
-                const duration = 1500;
+
+                const duration = 1800;
                 const step = target / (duration / 16);
                 let current = 0;
-                
+
                 const timer = setInterval(() => {
                     current += step;
                     if (current >= target) {
@@ -1569,12 +1793,12 @@
                         counters.forEach((counter, index) => {
                             setTimeout(() => {
                                 animateCounter(counter);
-                            }, index * 200);
+                            }, index * 250);
                         });
                         statsObserver.unobserve(entry.target);
                     }
                 });
-            }, { 
+            }, {
                 threshold: 0.3,
                 rootMargin: '50px'
             });
@@ -1588,7 +1812,7 @@
                         setTimeout(() => {
                             entry.target.style.opacity = '1';
                             entry.target.style.transform = 'translateY(0)';
-                        }, index * 150);
+                        }, index * 200);
                     }
                 });
             }, {
@@ -1599,46 +1823,46 @@
             // Observer les cartes de contenu
             document.querySelectorAll('.preview-card-premium').forEach(card => {
                 card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                card.style.transform = 'translateY(40px)';
+                card.style.transition = 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
                 cardObserver.observe(card);
             });
 
             // Observer les cartes média
             document.querySelectorAll('.media-card-premium').forEach(card => {
                 card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                card.style.transform = 'translateY(40px)';
+                card.style.transition = 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
                 cardObserver.observe(card);
             });
 
             // Observer les cartes de statistiques
             document.querySelectorAll('.stat-card-premium').forEach(card => {
                 card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                card.style.transform = 'translateY(40px)';
+                card.style.transition = 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
                 cardObserver.observe(card);
             });
 
-            // ===== EFFET PARALLAXE AMÉLIORÉ =====
+            // ===== EFFET PARALLAXE =====
             document.querySelectorAll('.thumbnail-container').forEach(container => {
                 container.addEventListener('mousemove', function(e) {
                     const img = this.querySelector('.media-image');
                     if (!img) return;
-                    
+
                     const x = e.clientX - this.getBoundingClientRect().left;
                     const y = e.clientY - this.getBoundingClientRect().top;
-                    
-                    const moveX = (x / this.offsetWidth - 0.5) * 15;
-                    const moveY = (y / this.offsetHeight - 0.5) * 15;
-                    
-                    img.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
+
+                    const moveX = (x / this.offsetWidth - 0.5) * 20;
+                    const moveY = (y / this.offsetHeight - 0.5) * 20;
+
+                    img.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
                 });
-                
+
                 container.addEventListener('mouseleave', function() {
                     const img = this.querySelector('.media-image');
                     if (img) {
-                        img.style.transform = 'scale(1) translate(0, 0)';
+                        img.style.transform = 'scale(1.1) translate(0, 0)';
                     }
                 });
             });
@@ -1647,10 +1871,10 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
@@ -1660,6 +1884,39 @@
                     }
                 });
             });
+
+            // ===== EFFET DE PARTICULES DANS LE HERO =====
+            const heroSection = document.querySelector('.hero-section');
+            if (heroSection) {
+                const particleCount = 30;
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.style.position = 'absolute';
+                    particle.style.width = Math.random() * 5 + 2 + 'px';
+                    particle.style.height = particle.style.width;
+                    particle.style.background = `rgba(144, 238, 144, ${Math.random() * 0.3 + 0.1})`;
+                    particle.style.borderRadius = '50%';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.zIndex = '1';
+                    particle.style.animation = `float ${Math.random() * 10 + 10}s linear infinite`;
+
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @keyframes float {
+                            0%, 100% {
+                                transform: translate(0, 0);
+                            }
+                            50% {
+                                transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);
+                            }
+                        }
+                    `;
+                    document.head.appendChild(style);
+
+                    heroSection.appendChild(particle);
+                }
+            }
         });
     </script>
 @endsection

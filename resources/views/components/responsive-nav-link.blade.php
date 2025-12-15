@@ -2,10 +2,54 @@
 
 @php
 $classes = ($active ?? false)
-            ? 'block w-full ps-3 pe-4 py-2 border-l-4 border-indigo-400 dark:border-indigo-600 text-start text-base font-medium text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-200 focus:bg-indigo-100 dark:focus:bg-indigo-900 focus:border-indigo-700 dark:focus:border-indigo-300 transition duration-150 ease-in-out'
-            : 'block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out';
+            ? 'custom-responsive-nav-link custom-responsive-nav-link-active'
+            : 'custom-responsive-nav-link';
 @endphp
 
 <a {{ $attributes->merge(['class' => $classes]) }}>
     {{ $slot }}
 </a>
+
+@once
+@push('styles')
+<style>
+    .custom-responsive-nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px 20px; /* ps-3 pe-4 py-2 */
+        border-left: 4px solid transparent; /* border-l-4 border-transparent */
+        text-align: start; /* text-start */
+        font-size: 1rem; /* text-base */
+        font-weight: 500; /* font-medium */
+        color: #64748b; /* text-gray-600 */
+        text-decoration: none;
+        transition: all 0.3s ease; /* transition duration-150 ease-in-out */
+        outline: none; /* focus:outline-none */
+    }
+
+    .custom-responsive-nav-link:hover {
+        color: #1a5fb4; /* hover:text-gray-800 - primary color on hover */
+        background-color: #edf5ff; /* hover:bg-gray-50 - light background on hover */
+        border-left-color: #1a5fb4; /* hover:border-gray-300 - primary color border */
+    }
+
+    .custom-responsive-nav-link:focus {
+        color: #1a5fb4; /* focus:text-gray-800 */
+        background-color: #edf5ff; /* focus:bg-gray-50 */
+        border-left-color: #1a5fb4; /* focus:border-gray-300 */
+    }
+
+    .custom-responsive-nav-link-active {
+        border-left-color: #1a5fb4; /* border-indigo-400 - primary color for active */
+        color: #1a1a2e; /* text-indigo-700 - darker text for active */
+        font-weight: 600; /* Stronger font for active */
+        background-color: #e2e8f0; /* bg-indigo-50 - subtle background for active */
+    }
+
+    .custom-responsive-nav-link-active:hover {
+        border-left-color: #26a269; /* Different color on hover for active */
+        color: #26a269;
+    }
+</style>
+@endpush
+@endonce
